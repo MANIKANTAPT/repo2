@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building23...'
-                sh 'mvn Build'
+                sh "mvn Build"
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing...'
+                echo "Testing..."
                 sh 'mvn Test'
             }
         }
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying'
-                sh 'mvn deploy'
+                sh "mvn deploy"
             }
         }
     }
