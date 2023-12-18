@@ -5,21 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building23...'
-                // Your build steps here
+                sh 'mvn Build'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Testing...'
-                // Your test steps here
+                sh 'mvn Test'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying'
-                // Your deployment steps here
+                sh 'mvn deploy'
             }
         }
     }
